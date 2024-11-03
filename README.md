@@ -1,0 +1,3 @@
+ICD files for integrating example Electrolyser and Fuelcell devices. 
+
+Hydrogen assets are being integrated into the distribution system at a face pace. Utilities operating the distribution system need to access information from these assets and control these assets in real time. Interoperability is a critical component towards enabling sensing and control of assets. Without interoperability, utilities will require a higher number of resources to enable communication with different assets. IEC 61850 is one of the available protocols to enable interoperability between the assets used in power industry

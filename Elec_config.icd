@@ -1,0 +1,2382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SCL release="4" revision="B" version="2007" xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header id="UCINREL" version="1" toolID="TMW SCL Navigator">
+  </Header>
+  <Communication>
+    <SubNetwork name="SubNetworkName">
+      <ConnectedAP apName="AP" iedName="DEV">
+        <Address>
+          <P type="OSI-AP-Title">1,1,9999,1</P>
+          <P type="OSI-AE-Qualifier">12</P>
+          <P type="OSI-PSEL">00000001</P>
+          <P type="OSI-SSEL">0001</P>
+          <P type="OSI-TSEL">0001</P>
+        </Address>
+        <SMV ldInst="EcStack" cbName="NewSMVCtl">
+          <Address>
+            <P type="VLAN-ID">0</P>
+            <P type="VLAN-PRIORITY">4</P>
+            <P type="MAC-Address">01-0C-CD-01-00-00</P>
+            <P type="APPID">1000</P>
+          </Address>
+        </SMV>
+      </ConnectedAP>
+    </SubNetwork>
+  </Communication>
+  <IED name="DEV" manufacturer="UCINREL" configVersion="1.0" originalSclRelease="4" originalSclRevision="B" originalSclVersion="2007">
+    <Services nameLength="64">
+      <DynAssociation />
+      <GetDirectory />
+      <GetDataObjectDefinition />
+      <DataObjectDirectory />
+      <GetDataSetValue />
+      <DataSetDirectory />
+      <ConfDataSet modify="true" maxAttributes="50" max="50" />
+      <DynDataSet maxAttributes="100" max="50" />
+      <ReadWrite />
+      <ConfReportControl bufConf="true" bufMode="both" max="50" />
+      <GetCBValues />
+      <ReportSettings rptID="Dyn" optFields="Dyn" bufTime="Dyn" trgOps="Dyn" intgPd="Dyn" resvTms="true" owner="true" cbName="Conf" datSet="Dyn" />
+      <LogSettings logEna="Dyn" trgOps="Dyn" intgPd="Dyn" cbName="Conf" datSet="Dyn" />
+      <GSESettings appID="Conf" dataLabel="Conf" cbName="Conf" datSet="Conf" />
+      <GOOSE max="10" />
+      <FileHandling />
+      <ConfLNs fixPrefix="true" />
+      <ConfLdName />
+      <ConfSigRef max="100" />
+      <ValueHandling />
+    </Services>
+    <AccessPoint name="AP">
+      <Server>
+        <Authentication />
+        <LDevice inst="CTRL">
+          <LN0 lnType="LLN0_2007" lnClass="LLN0" inst="" />
+          <LN lnType="LPHD_TYPE" lnClass="LPHD" inst="1" prefix="" />
+        </LDevice>
+        <LDevice inst="Measurements">
+          <LN0 lnType="LLN0_2007" lnClass="LLN0" inst="">
+            <DataSet name="electrolyzerdataset">
+              <FCDA ldInst="Measurements" lnClass="TTMP" lnInst="1" fc="ST" doName="Beh" />
+              <FCDA ldInst="Measurements" lnClass="TTMP" lnInst="1" fc="MX" doName="TmpSv" prefix="" />
+              <FCDA ldInst="Measurements" lnClass="TTMP" lnInst="2" prefix="" fc="ST" doName="Beh" />
+              <FCDA ldInst="Measurements" lnClass="TTMP" lnInst="2" prefix="" fc="MX" doName="TmpSv" />
+              <FCDA ldInst="Measurements" lnClass="TTMP" lnInst="3" prefix="" fc="ST" doName="Beh" />
+              <FCDA ldInst="Measurements" lnClass="TTMP" lnInst="3" prefix="" fc="MX" doName="TmpSv" />
+              <FCDA ldInst="Measurements" lnClass="TTMP" lnInst="4" prefix="" fc="ST" doName="Beh" />
+              <FCDA ldInst="Measurements" lnClass="TTMP" lnInst="4" prefix="" fc="MX" doName="TmpSv" />
+              <FCDA ldInst="Measurements" lnClass="TPRS" lnInst="1" prefix="" fc="ST" doName="Beh" />
+              <FCDA ldInst="Measurements" lnClass="TPRS" lnInst="1" prefix="" fc="MX" doName="PresSv" />
+              <FCDA ldInst="Measurements" lnClass="TFLW" lnInst="1" prefix="" fc="ST" doName="Beh" />
+              <FCDA ldInst="Measurements" lnClass="TFLW" lnInst="1" prefix="" fc="MX" doName="FlwSv" />
+              <FCDA ldInst="Measurements" lnClass="TFLW" lnInst="2" prefix="" fc="ST" doName="Beh" />
+              <FCDA ldInst="Measurements" lnClass="TFLW" lnInst="2" prefix="" fc="MX" doName="FlwSv" />
+              <FCDA ldInst="Measurements" lnClass="LLN0" fc="SP" doName="MltLev" prefix="" />
+              <FCDA ldInst="Measurements" lnClass="LLN0" fc="ST" doName="NamPlt" prefix="" />
+              <FCDA ldInst="Measurements" lnClass="LLN0" fc="ST" doName="Beh" prefix="" />
+              <FCDA ldInst="Measurements" lnClass="LLN0" fc="ST" doName="Health" prefix="" />
+              <FCDA ldInst="Measurements" lnClass="LLN0" fc="ST" doName="Mod" prefix="" />
+              <FCDA ldInst="Measurements" lnClass="LLN0" fc="ST" doName="LocKey" prefix="" />
+              <FCDA ldInst="Measurements" lnClass="LLN0" fc="ST" doName="Loc" prefix="" />
+              <FCDA ldInst="Measurements" lnClass="LLN0" fc="ST" doName="LocSta" prefix="" />
+              <FCDA ldInst="Measurements" lnClass="LLN0" fc="ST" doName="Diag" prefix="" />
+              <FCDA ldInst="Measurements" lnClass="LLN0" fc="ST" doName="LEDRs" prefix="" />
+            </DataSet>
+            <ReportControl name="NewRpt" buffered="true" confRev="1" indexed="true">
+              <TrgOps dchg="true" dupd="true" gi="true" period="true" />
+              <OptFields configRef="true" seqNum="true" entryID="true" bufOvfl="true" reasonCode="true" timeStamp="true" />
+              <RptEnabled />
+            </ReportControl>
+            <ReportControl name="NewRpt2" buffered="true" confRev="1" indexed="true" datSet="electrolyzerdataset">
+              <TrgOps dchg="true" dupd="true" gi="true" period="true" />
+              <OptFields configRef="true" seqNum="true" entryID="true" bufOvfl="true" reasonCode="true" timeStamp="true" />
+              <RptEnabled />
+            </ReportControl>
+            <DOI name="NamPlt">
+              <DAI name="vendor">
+                <Val />
+              </DAI>
+              <DAI name="swRev">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+              <DAI name="configRev">
+                <Val />
+              </DAI>
+              <DAI name="paramRev">
+                <Val />
+              </DAI>
+              <DAI name="valRev">
+                <Val />
+              </DAI>
+              <DAI name="ldNs">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="Beh">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="Health">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="Mod">
+              <SDI name="origin">
+                <DAI name="orCat">
+                  <Val />
+                </DAI>
+                <DAI name="orIdent">
+                  <Val />
+                </DAI>
+              </SDI>
+              <SDI name="Oper">
+                <SDI name="origin">
+                  <DAI name="orCat">
+                    <Val />
+                  </DAI>
+                  <DAI name="orIdent">
+                    <Val />
+                  </DAI>
+                </SDI>
+                <DAI name="ctlVal">
+                  <Val />
+                </DAI>
+                <DAI name="ctlNum">
+                  <Val />
+                </DAI>
+                <DAI name="T">
+                  <Val />
+                </DAI>
+                <DAI name="Test">
+                  <Val />
+                </DAI>
+                <DAI name="Check">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="ctlModel">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="LocKey">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="Loc">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="LocSta">
+              <SDI name="origin">
+                <DAI name="orCat">
+                  <Val />
+                </DAI>
+                <DAI name="orIdent">
+                  <Val />
+                </DAI>
+              </SDI>
+              <SDI name="Oper">
+                <SDI name="origin">
+                  <DAI name="orCat">
+                    <Val />
+                  </DAI>
+                  <DAI name="orIdent">
+                    <Val />
+                  </DAI>
+                </SDI>
+                <DAI name="ctlVal">
+                  <Val />
+                </DAI>
+                <DAI name="ctlNum">
+                  <Val />
+                </DAI>
+                <DAI name="T">
+                  <Val />
+                </DAI>
+                <DAI name="Test">
+                  <Val />
+                </DAI>
+                <DAI name="Check">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="ctlModel">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="Diag">
+              <SDI name="origin">
+                <DAI name="orCat">
+                  <Val />
+                </DAI>
+                <DAI name="orIdent">
+                  <Val />
+                </DAI>
+              </SDI>
+              <SDI name="Oper">
+                <SDI name="origin">
+                  <DAI name="orCat">
+                    <Val />
+                  </DAI>
+                  <DAI name="orIdent">
+                    <Val />
+                  </DAI>
+                </SDI>
+                <DAI name="ctlVal">
+                  <Val />
+                </DAI>
+                <DAI name="ctlNum">
+                  <Val />
+                </DAI>
+                <DAI name="T">
+                  <Val />
+                </DAI>
+                <DAI name="Test">
+                  <Val />
+                </DAI>
+                <DAI name="Check">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="ctlModel">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="LEDRs">
+              <SDI name="origin">
+                <DAI name="orCat">
+                  <Val />
+                </DAI>
+                <DAI name="orIdent">
+                  <Val />
+                </DAI>
+              </SDI>
+              <SDI name="Oper">
+                <SDI name="origin">
+                  <DAI name="orCat">
+                    <Val />
+                  </DAI>
+                  <DAI name="orIdent">
+                    <Val />
+                  </DAI>
+                </SDI>
+                <DAI name="ctlVal">
+                  <Val />
+                </DAI>
+                <DAI name="ctlNum">
+                  <Val />
+                </DAI>
+                <DAI name="T">
+                  <Val />
+                </DAI>
+                <DAI name="Test">
+                  <Val />
+                </DAI>
+                <DAI name="Check">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="ctlModel">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="MltLev">
+              <DAI name="setVal">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+          </LN0>
+          <LN lnType="TTMP_TYPE" lnClass="TTMP" inst="1" desc="deoxReactorTemperature">
+            <DataSet name="ttmp1">
+              <FCDA ldInst="Measurements" lnClass="TTMP" lnInst="1" fc="ST" doName="Beh" />
+              <FCDA ldInst="Measurements" lnClass="TTMP" lnInst="1" fc="MX" doName="TmpSv" prefix="" />
+            </DataSet>
+            <DOI name="Beh">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="TmpSv">
+              <SDI name="instMag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+            </DOI>
+            <Inputs />
+          </LN>
+          <LN lnType="TTMP_TYPE" lnClass="TTMP" inst="2" prefix="" desc="KOHTemperature">
+            <DOI name="Beh">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="TmpSv">
+              <SDI name="instMag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnType="TTMP_TYPE" lnClass="TTMP" inst="3" prefix="" desc="CathodeOutletTemperature">
+            <ReportControl name="NewRptcathodetemp" buffered="true" confRev="1" indexed="true">
+              <TrgOps dchg="true" dupd="true" gi="true" period="true" />
+              <OptFields configRef="true" seqNum="true" entryID="true" bufOvfl="true" reasonCode="true" timeStamp="true" />
+              <RptEnabled />
+            </ReportControl>
+            <DOI name="Beh">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="TmpSv">
+              <SDI name="instMag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnType="TTMP_TYPE" lnClass="TTMP" inst="4" prefix="" desc="AnodeOutletTemperature">
+            <DOI name="Beh">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="TmpSv">
+              <SDI name="instMag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnType="TPRS_TYPE" lnClass="TPRS" inst="1" prefix="" desc="O2pressure">
+            <DOI name="Beh">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="PresSv">
+              <SDI name="instMag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnType="TFLW_TYPE" lnClass="TFLW" inst="1" prefix="" desc="AnodeMassFlow">
+            <DOI name="Beh">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="FlwSv">
+              <SDI name="instMag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnType="TFLW_TYPE" lnClass="TFLW" inst="2" prefix="" desc="CathodeMassFlow">
+            <DOI name="Beh">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="FlwSv">
+              <SDI name="instMag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+            </DOI>
+          </LN>
+        </LDevice>
+        <LDevice inst="Controls">
+          <LN0 lnType="LLN0_2007" lnClass="LLN0" inst="" />
+          <LN lnType="KPMP_DEV" lnClass="ControlKPMP" inst="1">
+            <DataSet name="controlpump1">
+              <FCDA ldInst="Controls" lnClass="ControlKPMP" lnInst="1" fc="ST" doName="Beh" />
+              <FCDA ldInst="Controls" lnClass="ControlKPMP" lnInst="1" fc="MX" doName="FlwSv" />
+              <FCDA ldInst="Controls" lnClass="ControlKPMP" lnInst="1" fc="MX" doName="H2FlwRte" />
+              <FCDA ldInst="Controls" lnClass="ControlKPMP" lnInst="1" fc="MX" doName="InH2Pres" />
+            </DataSet>
+          </LN>
+        </LDevice>
+        <LDevice inst="AnodePump">
+          <LN0 lnType="LLN0_2007" lnClass="LLN0" inst="" />
+          <LN lnType="LPHD_TYPE" lnClass="KPMP" inst="1" />
+        </LDevice>
+        <LDevice inst="CathodePump" desc="">
+          <LN0 lnType="LLN0_2007" lnClass="LLN0" inst="" desc="" />
+          <LN lnType="LPHD_TYPE" lnClass="KPMP" inst="1" prefix="" desc="" />
+        </LDevice>
+        <LDevice inst="FeedWaterPump" desc="">
+          <LN0 lnType="LLN0_2007" lnClass="LLN0" inst="" desc="" />
+          <LN lnType="LPHD_TYPE" lnClass="KPMP" inst="1" prefix="" desc="" />
+        </LDevice>
+        <LDevice inst="Valvecontrolexample">
+          <LN0 lnType="LLN0_2007" lnClass="LLN0" inst="" />
+          <LN lnType="LPHD_TYPE" lnClass="KVLV" inst="1">
+            <DOI name="NamPlt">
+              <DAI name="vendor">
+                <Val />
+              </DAI>
+              <DAI name="swRev">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+              <DAI name="configRev">
+                <Val />
+              </DAI>
+              <DAI name="paramRev">
+                <Val />
+              </DAI>
+              <DAI name="valRev">
+                <Val />
+              </DAI>
+              <DAI name="ldNs">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="Beh">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="Health">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="Mir">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="Mod">
+              <SDI name="origin">
+                <DAI name="orCat">
+                  <Val />
+                </DAI>
+                <DAI name="orIdent">
+                  <Val />
+                </DAI>
+              </SDI>
+              <SDI name="Oper">
+                <SDI name="origin">
+                  <DAI name="orCat">
+                    <Val />
+                  </DAI>
+                  <DAI name="orIdent">
+                    <Val />
+                  </DAI>
+                </SDI>
+                <DAI name="ctlVal">
+                  <Val />
+                </DAI>
+                <DAI name="ctlNum">
+                  <Val />
+                </DAI>
+                <DAI name="T">
+                  <Val />
+                </DAI>
+                <DAI name="Test">
+                  <Val />
+                </DAI>
+                <DAI name="Check">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="ctlModel">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="InRef1">
+              <DAI name="setSrcRef">
+                <Val />
+              </DAI>
+              <DAI name="setTstRef">
+                <Val />
+              </DAI>
+              <DAI name="setSrcCB">
+                <Val />
+              </DAI>
+              <DAI name="setTstCB">
+                <Val />
+              </DAI>
+              <DAI name="intAddr">
+                <Val />
+              </DAI>
+              <DAI name="tstEna">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="ClcExp">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="ClcNxtTmms">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="ClcStr">
+              <SDI name="origin">
+                <DAI name="orCat">
+                  <Val />
+                </DAI>
+                <DAI name="orIdent">
+                  <Val />
+                </DAI>
+              </SDI>
+              <SDI name="Oper">
+                <SDI name="origin">
+                  <DAI name="orCat">
+                    <Val />
+                  </DAI>
+                  <DAI name="orIdent">
+                    <Val />
+                  </DAI>
+                </SDI>
+                <DAI name="ctlVal">
+                  <Val />
+                </DAI>
+                <DAI name="ctlNum">
+                  <Val />
+                </DAI>
+                <DAI name="T">
+                  <Val />
+                </DAI>
+                <DAI name="Test">
+                  <Val />
+                </DAI>
+                <DAI name="Check">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="ctlModel">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="ClcMth">
+              <DAI name="setVal">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="ClcMod">
+              <DAI name="setVal">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="ClcIntvTyp">
+              <DAI name="setVal">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="ClcIntvPer">
+              <DAI name="setVal">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="NumSubIntv">
+              <DAI name="setVal">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="ClcRfTyp">
+              <DAI name="setVal">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="ClcRfPer">
+              <DAI name="setVal">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="ClcSrc">
+              <DAI name="setSrcRef">
+                <Val />
+              </DAI>
+              <DAI name="setTstRef">
+                <Val />
+              </DAI>
+              <DAI name="setSrcCB">
+                <Val />
+              </DAI>
+              <DAI name="setTstCB">
+                <Val />
+              </DAI>
+              <DAI name="intAddr">
+                <Val />
+              </DAI>
+              <DAI name="tstEna">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="InSyn">
+              <DAI name="setSrcRef">
+                <Val />
+              </DAI>
+              <DAI name="setTstRef">
+                <Val />
+              </DAI>
+              <DAI name="setSrcCB">
+                <Val />
+              </DAI>
+              <DAI name="setTstCB">
+                <Val />
+              </DAI>
+              <DAI name="intAddr">
+                <Val />
+              </DAI>
+              <DAI name="tstEna">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="Blk">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="BlkRef1">
+              <DAI name="setSrcRef">
+                <Val />
+              </DAI>
+              <DAI name="setTstRef">
+                <Val />
+              </DAI>
+              <DAI name="setSrcCB">
+                <Val />
+              </DAI>
+              <DAI name="setTstCB">
+                <Val />
+              </DAI>
+              <DAI name="intAddr">
+                <Val />
+              </DAI>
+              <DAI name="tstEna">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="StcSt">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="CelVTrCnt">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="StcLodTms">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="MaintTms">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="StcWh">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="StcEfcPct">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="OutDCV">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="OutDCA">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="InClTmp">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="OutClTmp">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="ClFlwRte">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="ClPres">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="H2FlwRte">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="InH2Pres">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="InOxFlwRte">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="InOxPres">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="StcWRtg">
+              <SDI name="setMag">
+                <DAI name="i">
+                  <Val />
+                </DAI>
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="StcVRtg">
+              <SDI name="setMag">
+                <DAI name="i">
+                  <Val />
+                </DAI>
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="StcARtg">
+              <SDI name="setMag">
+                <DAI name="i">
+                  <Val />
+                </DAI>
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="StcFuelTyp">
+              <DAI name="setVal">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="CelCnt">
+              <DAI name="setVal">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="StrCnt">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="ConnGriCnt">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="LifeTms">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="LifeEfcPct">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="InstEfcPct">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="LifeWh">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="FuelCsmp">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="WtrCsmp">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="WtrLev">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="OutH2Rte">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="OutH2Lev">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="WtrCndct">
+              <SDI name="mag">
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="FuelStop">
+              <SDI name="origin">
+                <DAI name="orCat">
+                  <Val />
+                </DAI>
+                <DAI name="orIdent">
+                  <Val />
+                </DAI>
+              </SDI>
+              <SDI name="Oper">
+                <SDI name="origin">
+                  <DAI name="orCat">
+                    <Val />
+                  </DAI>
+                  <DAI name="orIdent">
+                    <Val />
+                  </DAI>
+                </SDI>
+                <DAI name="ctlVal">
+                  <Val />
+                </DAI>
+                <DAI name="ctlNum">
+                  <Val />
+                </DAI>
+                <DAI name="T">
+                  <Val />
+                </DAI>
+                <DAI name="Test">
+                  <Val />
+                </DAI>
+                <DAI name="Check">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="ctlModel">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="EmgCtl">
+              <SDI name="origin">
+                <DAI name="orCat">
+                  <Val />
+                </DAI>
+                <DAI name="orIdent">
+                  <Val />
+                </DAI>
+              </SDI>
+              <SDI name="Oper">
+                <SDI name="origin">
+                  <DAI name="orCat">
+                    <Val />
+                  </DAI>
+                  <DAI name="orIdent">
+                    <Val />
+                  </DAI>
+                </SDI>
+                <DAI name="ctlVal">
+                  <Val />
+                </DAI>
+                <DAI name="ctlNum">
+                  <Val />
+                </DAI>
+                <DAI name="T">
+                  <Val />
+                </DAI>
+                <DAI name="Test">
+                  <Val />
+                </DAI>
+                <DAI name="Check">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="ctlModel">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="StrCntRs">
+              <SDI name="origin">
+                <DAI name="orCat">
+                  <Val />
+                </DAI>
+                <DAI name="orIdent">
+                  <Val />
+                </DAI>
+              </SDI>
+              <SDI name="Oper">
+                <SDI name="origin">
+                  <DAI name="orCat">
+                    <Val />
+                  </DAI>
+                  <DAI name="orIdent">
+                    <Val />
+                  </DAI>
+                </SDI>
+                <DAI name="ctlVal">
+                  <Val />
+                </DAI>
+                <DAI name="ctlNum">
+                  <Val />
+                </DAI>
+                <DAI name="T">
+                  <Val />
+                </DAI>
+                <DAI name="Test">
+                  <Val />
+                </DAI>
+                <DAI name="Check">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="ctlModel">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="GriIndpWRtg">
+              <SDI name="setMag">
+                <DAI name="i">
+                  <Val />
+                </DAI>
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="GriDepRtg">
+              <SDI name="setMag">
+                <DAI name="i">
+                  <Val />
+                </DAI>
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="VRtg">
+              <SDI name="setMag">
+                <DAI name="i">
+                  <Val />
+                </DAI>
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="HzRtg">
+              <SDI name="setMag">
+                <DAI name="i">
+                  <Val />
+                </DAI>
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="FuelTyp">
+              <DAI name="setVal">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="EfcPct">
+              <SDI name="setMag">
+                <DAI name="i">
+                  <Val />
+                </DAI>
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="ALim">
+              <SDI name="setMag">
+                <DAI name="i">
+                  <Val />
+                </DAI>
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="VLim">
+              <SDI name="setMag">
+                <DAI name="i">
+                  <Val />
+                </DAI>
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="OpTmh">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="ARtg">
+              <SDI name="setMag">
+                <DAI name="i">
+                  <Val />
+                </DAI>
+                <DAI name="f">
+                  <Val />
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="PhyNam">
+              <DAI name="vendor">
+                <Val />
+              </DAI>
+              <DAI name="hwRev">
+                <Val />
+              </DAI>
+              <DAI name="swRev">
+                <Val />
+              </DAI>
+              <DAI name="serNum">
+                <Val />
+              </DAI>
+              <DAI name="model">
+                <Val />
+              </DAI>
+              <DAI name="location">
+                <Val />
+              </DAI>
+              <DAI name="name">
+                <Val />
+              </DAI>
+              <DAI name="owner">
+                <Val />
+              </DAI>
+              <DAI name="ePSName">
+                <Val />
+              </DAI>
+              <DAI name="primeOper">
+                <Val />
+              </DAI>
+              <DAI name="secondOper">
+                <Val />
+              </DAI>
+              <DAI name="latitude">
+                <Val />
+              </DAI>
+              <DAI name="longitude">
+                <Val />
+              </DAI>
+              <DAI name="altitude">
+                <Val />
+              </DAI>
+              <DAI name="mRID">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="PhyHealth">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="OutOv">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="Proxy">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="InOv">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="NumPwrUp">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="WrmStr">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="WacTrg">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="PwrUp">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="PwrDn">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="PwrSupAlm">
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="RsStat">
+              <SDI name="origin">
+                <DAI name="orCat">
+                  <Val />
+                </DAI>
+                <DAI name="orIdent">
+                  <Val />
+                </DAI>
+              </SDI>
+              <SDI name="Oper">
+                <SDI name="origin">
+                  <DAI name="orCat">
+                    <Val />
+                  </DAI>
+                  <DAI name="orIdent">
+                    <Val />
+                  </DAI>
+                </SDI>
+                <DAI name="ctlVal">
+                  <Val />
+                </DAI>
+                <DAI name="ctlNum">
+                  <Val />
+                </DAI>
+                <DAI name="T">
+                  <Val />
+                </DAI>
+                <DAI name="Test">
+                  <Val />
+                </DAI>
+                <DAI name="Check">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="ctlModel">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+            <DOI name="Sim">
+              <SDI name="origin">
+                <DAI name="orCat">
+                  <Val />
+                </DAI>
+                <DAI name="orIdent">
+                  <Val />
+                </DAI>
+              </SDI>
+              <SDI name="Oper">
+                <SDI name="origin">
+                  <DAI name="orCat">
+                    <Val />
+                  </DAI>
+                  <DAI name="orIdent">
+                    <Val />
+                  </DAI>
+                </SDI>
+                <DAI name="ctlVal">
+                  <Val />
+                </DAI>
+                <DAI name="ctlNum">
+                  <Val />
+                </DAI>
+                <DAI name="T">
+                  <Val />
+                </DAI>
+                <DAI name="Test">
+                  <Val />
+                </DAI>
+                <DAI name="Check">
+                  <Val />
+                </DAI>
+              </SDI>
+              <DAI name="stVal">
+                <Val />
+              </DAI>
+              <DAI name="q">
+                <Val />
+              </DAI>
+              <DAI name="t">
+                <Val />
+              </DAI>
+              <DAI name="ctlModel">
+                <Val />
+              </DAI>
+              <DAI name="d">
+                <Val />
+              </DAI>
+              <DAI name="dU">
+                <Val />
+              </DAI>
+            </DOI>
+          </LN>
+        </LDevice>
+      </Server>
+      <Services />
+    </AccessPoint>
+  </IED>
+  <DataTypeTemplates>
+    <LNodeType id="LLN0_2007" lnClass="LLN0">
+      <DO name="NamPlt" type="LPL_LD2007" />
+      <DO name="Beh" type="ENS_Beh" />
+      <DO name="Health" type="ENS_Health" />
+      <DO name="Mod" type="ENC_Mod_direct" />
+      <DO name="LocKey" type="SPS_noSVnoBL" />
+      <DO name="Loc" type="SPS_noSVnoBL" />
+      <DO name="LocSta" type="SPC_direct" />
+      <DO name="Diag" type="SPC_direct" />
+      <DO name="LEDRs" type="SPC_direct" />
+      <DO name="MltLev" type="SPG_SP" />
+    </LNodeType>
+    <LNodeType id="LPHD_TYPE" lnClass="LPHD">
+      <DO name="NamPlt" type="LPL_LD2007" />
+      <DO name="Beh" type="ENS_Beh" />
+      <DO name="Health" type="ENS_Health" />
+      <DO name="Mir" type="SPS_noSVnoBL" />
+      <DO name="Mod" type="ENC_Mod_direct" />
+      <DO name="InRef1" type="ORG" />
+      <DO name="ClcExp" type="SPS_noSVnoBL" />
+      <DO name="ClcNxtTmms" type="INS_noSVnoBL" />
+      <DO name="ClcStr" type="SPC_direct" />
+      <DO name="ClcMth" type="ENG_CalcMethodKind" />
+      <DO name="ClcMod" type="ENG_CalcModeKind" />
+      <DO name="ClcIntvTyp" type="ENG_CalcIntervalKind" />
+      <DO name="ClcIntvPer" type="ING" />
+      <DO name="NumSubIntv" type="ING" />
+      <DO name="ClcRfTyp" type="ENG_CalcIntervalKind" />
+      <DO name="ClcRfPer" type="ING" />
+      <DO name="ClcSrc" type="ORG" />
+      <DO name="InSyn" type="ORG" />
+      <DO name="Blk" type="SPS_noSVnoBL" />
+      <DO name="BlkRef1" type="ORG" />
+      <DO name="StcSt" type="SPS_noSVnoBL" />
+      <DO name="CelVTrCnt" type="INS_noSVnoBL" />
+      <DO name="StcLodTms" type="INS_noSVnoBL" />
+      <DO name="MaintTms" type="INS_noSVnoBL" />
+      <DO name="StcWh" type="MV" />
+      <DO name="StcEfcPct" type="MV" />
+      <DO name="OutDCV" type="MV" />
+      <DO name="OutDCA" type="MV" />
+      <DO name="InClTmp" type="MV" />
+      <DO name="OutClTmp" type="MV" />
+      <DO name="ClFlwRte" type="MV" />
+      <DO name="ClPres" type="MV" />
+      <DO name="H2FlwRte" type="MV" />
+      <DO name="InH2Pres" type="MV" />
+      <DO name="InOxFlwRte" type="MV" />
+      <DO name="InOxPres" type="MV" />
+      <DO name="StcWRtg" type="ASG" />
+      <DO name="StcVRtg" type="ASG" />
+      <DO name="StcARtg" type="ASG" />
+      <DO name="StcFuelTyp" type="ENG_FuelKind" />
+      <DO name="CelCnt" type="ING" />
+      <DO name="StrCnt" type="INS_noSVnoBL" />
+      <DO name="ConnGriCnt" type="INS_noSVnoBL" />
+      <DO name="LifeTms" type="INS_noSVnoBL" />
+      <DO name="LifeEfcPct" type="INS_noSVnoBL" />
+      <DO name="InstEfcPct" type="INS_noSVnoBL" />
+      <DO name="LifeWh" type="MV" />
+      <DO name="FuelCsmp" type="MV" />
+      <DO name="WtrCsmp" type="MV" />
+      <DO name="WtrLev" type="MV" />
+      <DO name="OutH2Rte" type="MV" />
+      <DO name="OutH2Lev" type="MV" />
+      <DO name="WtrCndct" type="MV" />
+      <DO name="FuelStop" type="SPC_direct" />
+      <DO name="EmgCtl" type="SPC_direct" />
+      <DO name="StrCntRs" type="SPC_direct" />
+      <DO name="GriIndpWRtg" type="ASG" />
+      <DO name="GriDepRtg" type="ASG" />
+      <DO name="VRtg" type="ASG" />
+      <DO name="HzRtg" type="ASG" />
+      <DO name="FuelTyp" type="ENG_FuelKind" />
+      <DO name="EfcPct" type="ASG" />
+      <DO name="ALim" type="ASG" />
+      <DO name="VLim" type="ASG" />
+      <DO name="OpTmh" type="INS_noSVnoBL" />
+      <DO name="ARtg" type="ASG" />
+      <DO name="PhyNam" type="DPL_Full" />
+      <DO name="PhyHealth" type="ENS_Health" />
+      <DO name="OutOv" type="SPS_noSVnoBL" />
+      <DO name="Proxy" type="SPS_noSVnoBL" />
+      <DO name="InOv" type="SPS_noSVnoBL" />
+      <DO name="NumPwrUp" type="INS_noSVnoBL" />
+      <DO name="WrmStr" type="INS_noSVnoBL" />
+      <DO name="WacTrg" type="INS_noSVnoBL" />
+      <DO name="PwrUp" type="SPS_noSVnoBL" />
+      <DO name="PwrDn" type="SPS_noSVnoBL" />
+      <DO name="PwrSupAlm" type="SPS_noSVnoBL" />
+      <DO name="RsStat" type="SPC_direct" />
+      <DO name="Sim" type="SPC_direct" />
+    </LNodeType>
+    <LNodeType id="TTMP_TYPE" lnClass="TTMP">
+      <DO name="Beh" type="ENS_BehaviourModeKind" />
+      <DO name="TmpSv" type="SAV" />
+    </LNodeType>
+    <LNodeType id="TPRS_TYPE" lnClass="TPRS">
+      <DO name="Beh" type="TMW_Generated_ENS_BehaviourModeKind" />
+      <DO name="PresSv" type="SAV" />
+    </LNodeType>
+    <LNodeType id="TFLW_TYPE" lnClass="TFLW">
+      <DO name="Beh" type="TMW_Generated_ENS_BehaviourModeKind1" />
+      <DO name="FlwSv" type="SAV" />
+    </LNodeType>
+    <LNodeType id="KPMP_DEV" lnClass="ControlKPMP">
+      <DO name="Beh" type="TMW_Generated_ENS_BehaviourModeKind1" />
+      <DO name="FlwSv" type="SAV" />
+      <DO name="H2FlwRte" type="MV" />
+      <DO name="InH2Pres" type="MV" />
+    </LNodeType>
+    <DOType id="LPL_LD2007" cdc="LPL">
+      <DA name="vendor" bType="VisString255" fc="DC">
+        <Val>UCINREL</Val>
+      </DA>
+      <DA name="swRev" bType="VisString255" fc="DC">
+        <Val>1.0</Val>
+      </DA>
+      <DA name="d" bType="VisString255" fc="DC" />
+      <DA name="dU" bType="Unicode255" fc="DC" />
+      <DA name="configRev" bType="VisString255" fc="DC">
+        <Val>1.0</Val>
+      </DA>
+      <DA name="paramRev" bType="INT32" dchg="true" fc="ST">
+        <Val>0</Val>
+      </DA>
+      <DA name="valRev" bType="INT32" dchg="true" fc="ST">
+        <Val>0</Val>
+      </DA>
+      <DA name="ldNs" bType="VisString255" fc="EX">
+        <Val>IEC 61850-7-4:2007</Val>
+      </DA>
+    </DOType>
+    <DOType id="ENS_Health" cdc="ENS">
+      <DA name="stVal" bType="Enum" type="HealthKind" dchg="true" dupd="true" fc="ST" />
+      <DA name="q" bType="Quality" qchg="true" fc="ST" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+      <DA name="d" bType="VisString255" fc="DC" />
+      <DA name="dU" bType="Unicode255" fc="DC" />
+    </DOType>
+    <DOType id="ENS_Beh" cdc="ENS">
+      <DA name="stVal" bType="Enum" type="BehaviourModeKind" dchg="true" dupd="true" fc="ST" />
+      <DA name="q" bType="Quality" qchg="true" fc="ST" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+      <DA name="d" bType="VisString255" fc="DC" />
+      <DA name="dU" bType="Unicode255" fc="DC" />
+    </DOType>
+    <DOType id="SPS_noSVnoBL" cdc="SPS">
+      <DA name="stVal" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA name="q" bType="Quality" qchg="true" fc="ST" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+      <DA name="d" bType="VisString255" fc="DC" />
+      <DA name="dU" bType="Unicode255" fc="DC" />
+    </DOType>
+    <DOType id="ENC_Mod_direct" cdc="ENC">
+      <DA name="origin" bType="Struct" type="Originator" fc="ST" />
+      <DA name="stVal" bType="Enum" type="BehaviourModeKind" dchg="true" fc="ST" />
+      <DA name="q" bType="Quality" qchg="true" fc="ST" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+      <DA name="ctlModel" bType="Enum" type="CtlModelKind" fc="CF" valKind="RO">
+        <Val>direct-with-normal-security</Val>
+      </DA>
+      <DA name="d" bType="VisString255" fc="DC" />
+      <DA name="dU" bType="Unicode255" fc="DC" />
+      <DA name="Oper" bType="Struct" fc="CO" type="OperBehaviourModeKind" />
+    </DOType>
+    <DOType id="SPC_direct" cdc="SPC">
+      <DA name="origin" bType="Struct" type="Originator" fc="ST" />
+      <DA name="stVal" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA name="q" bType="Quality" qchg="true" fc="ST" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+      <DA name="ctlModel" bType="Enum" type="CtlModelKind" dchg="true" fc="CF" valKind="RO">
+        <Val>direct-with-normal-security</Val>
+      </DA>
+      <DA name="d" bType="VisString255" fc="DC" />
+      <DA name="dU" bType="Unicode255" fc="DC" />
+      <DA name="Oper" bType="Struct" fc="CO" type="OperBool" />
+    </DOType>
+    <DOType id="INS_noSVnoBL" cdc="INS">
+      <DA name="stVal" bType="INT32" dchg="true" fc="ST" />
+      <DA name="q" bType="Quality" qchg="true" fc="ST" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+      <DA name="d" bType="VisString255" fc="DC" />
+      <DA name="dU" bType="Unicode255" fc="DC" />
+    </DOType>
+    <DOType id="SPG_SP" cdc="SPG">
+      <DA name="setVal" bType="BOOLEAN" dchg="true" fc="SP" />
+      <DA name="d" bType="VisString255" fc="DC" />
+      <DA name="dU" bType="Unicode255" fc="DC" />
+    </DOType>
+    <DOType id="DPL_Full" cdc="DPL">
+      <DA name="vendor" bType="VisString255" fc="DC">
+        <Val>UCINREL</Val>
+      </DA>
+      <DA name="hwRev" bType="VisString255" fc="DC" />
+      <DA name="swRev" bType="VisString255" fc="DC" />
+      <DA name="serNum" bType="VisString255" fc="DC" />
+      <DA name="model" bType="VisString255" fc="DC" />
+      <DA name="location" bType="VisString255" fc="DC" />
+      <DA name="name" bType="VisString64" fc="DC" />
+      <DA name="owner" bType="VisString255" fc="DC" />
+      <DA name="ePSName" bType="VisString255" fc="DC" />
+      <DA name="primeOper" bType="VisString255" fc="DC" />
+      <DA name="secondOper" bType="VisString255" fc="DC" />
+      <DA name="latitude" bType="FLOAT32" fc="DC" />
+      <DA name="longitude" bType="FLOAT32" fc="DC" />
+      <DA name="altitude" bType="FLOAT32" fc="DC" />
+      <DA name="mRID" bType="VisString255" fc="DC" />
+      <DA name="d" bType="VisString255" fc="DC" />
+      <DA name="dU" bType="Unicode255" fc="DC" />
+    </DOType>
+    <DOType id="ASG" cdc="ASG">
+      <DA name="setMag" bType="Struct" type="AnalogueValueCtl" fc="SP" />
+    </DOType>
+    <DOType id="ENS_BehaviourModeKind" cdc="ENS">
+      <DA name="stVal" bType="Enum" type="BehaviourModeKind" fc="ST" />
+      <DA name="q" bType="Quality" fc="ST" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="TMW_Generated_ENS_BehaviourModeKind" cdc="ENS">
+      <DA name="stVal" bType="Enum" type="BehaviourModeKind" fc="ST" />
+      <DA name="q" bType="Quality" fc="ST" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="TMW_Generated_ENS_BehaviourModeKind1" cdc="ENS">
+      <DA name="stVal" bType="Enum" type="BehaviourModeKind" fc="ST" />
+      <DA name="q" bType="Quality" fc="ST" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="SAV" cdc="SAV">
+      <DA name="instMag" bType="Struct" type="AnalogueValue" fc="MX" />
+      <DA name="q" bType="Quality" fc="MX" />
+    </DOType>
+    <DOType id="ORG" cdc="ORG">
+      <DA name="setSrcRef" bType="ObjRef" fc="SP" />
+      <DA name="setTstRef" bType="ObjRef" fc="SP" />
+      <DA name="setSrcCB" bType="ObjRef" fc="SP" />
+      <DA name="setTstCB" bType="ObjRef" fc="SP" />
+      <DA name="intAddr" bType="VisString255" fc="SP" />
+      <DA name="tstEna" bType="BOOLEAN" fc="SP" />
+    </DOType>
+    <DOType id="ENG_CalcMethodKind" cdc="ENG">
+      <DA name="setVal" bType="Enum" type="CalcMethodKind" fc="SP" />
+    </DOType>
+    <DOType id="ENG_CalcModeKind" cdc="ENG">
+      <DA name="setVal" bType="Enum" type="CalcModeKind" fc="SP" />
+    </DOType>
+    <DOType id="ENG_CalcIntervalKind" cdc="ENG">
+      <DA name="setVal" bType="Enum" type="CalcIntervalKind" fc="SP" />
+    </DOType>
+    <DOType id="ING" cdc="ING">
+      <DA name="setVal" bType="INT32" fc="SP" />
+    </DOType>
+    <DOType id="MV" cdc="MV">
+      <DA name="mag" bType="Struct" type="AnalogueValue" fc="MX" />
+      <DA name="q" bType="Quality" fc="MX" />
+      <DA name="t" bType="Timestamp" fc="MX" />
+    </DOType>
+    <DOType id="ENG_FuelKind" cdc="ENG">
+      <DA name="setVal" bType="Enum" type="FuelKind" fc="SP" />
+    </DOType>
+    <DAType id="Originator">
+      <BDA name="orCat" bType="Enum" type="OriginatorCategoryKind" />
+      <BDA name="orIdent" bType="Octet64" />
+    </DAType>
+    <DAType id="OperBool">
+      <BDA name="ctlVal" bType="BOOLEAN" />
+      <BDA name="origin" bType="Struct" type="Originator" />
+      <BDA name="ctlNum" bType="INT8U" />
+      <BDA name="T" bType="Timestamp" />
+      <BDA name="Test" bType="BOOLEAN" />
+      <BDA name="Check" bType="Check" sAddr="" />
+    </DAType>
+    <DAType id="OperBehaviourModeKind">
+      <BDA name="ctlVal" bType="Enum" type="BehaviourModeKind" />
+      <BDA name="origin" bType="Struct" type="Originator" />
+      <BDA name="ctlNum" bType="INT8U" />
+      <BDA name="T" bType="Timestamp" />
+      <BDA name="Test" bType="BOOLEAN" />
+      <BDA name="Check" bType="Check" sAddr="" />
+    </DAType>
+    <DAType id="AnalogueValueCtl">
+      <BDA name="i" bType="INT32" />
+      <BDA name="f" bType="FLOAT32" />
+    </DAType>
+    <DAType id="AnalogueValue">
+      <BDA name="f" bType="FLOAT32" />
+    </DAType>
+    <EnumType id="BehaviourModeKind">
+      <EnumVal ord="1">on</EnumVal>
+      <EnumVal ord="2">blocked</EnumVal>
+      <EnumVal ord="3">test</EnumVal>
+      <EnumVal ord="4">test/blocked</EnumVal>
+      <EnumVal ord="5">off</EnumVal>
+    </EnumType>
+    <EnumType id="CtlModelKind">
+      <EnumVal ord="0">status-only</EnumVal>
+      <EnumVal ord="1">direct-with-normal-security</EnumVal>
+      <EnumVal ord="2">sbo-with-normal-security</EnumVal>
+      <EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+      <EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+    </EnumType>
+    <EnumType id="HealthKind">
+      <EnumVal ord="1">Ok</EnumVal>
+      <EnumVal ord="2">Warning</EnumVal>
+      <EnumVal ord="3">Alarm</EnumVal>
+    </EnumType>
+    <EnumType id="OriginatorCategoryKind">
+      <EnumVal ord="0">not-supported</EnumVal>
+      <EnumVal ord="1">bay-control</EnumVal>
+      <EnumVal ord="2">station-control</EnumVal>
+      <EnumVal ord="3">remote-control</EnumVal>
+      <EnumVal ord="4">automatic-bay</EnumVal>
+      <EnumVal ord="5">automatic-station</EnumVal>
+      <EnumVal ord="6">automatic-remote</EnumVal>
+      <EnumVal ord="7">maintenance</EnumVal>
+      <EnumVal ord="8">process</EnumVal>
+    </EnumType>
+    <EnumType id="CalcMethodKind">
+      <EnumVal ord="1">UNSPECIFIED</EnumVal>
+      <EnumVal ord="2">TRUE_RMS</EnumVal>
+      <EnumVal ord="3">PEAK_FUNDAMENTAL</EnumVal>
+      <EnumVal ord="4">RMS_FUNDAMENTAL</EnumVal>
+      <EnumVal ord="5">MIN</EnumVal>
+      <EnumVal ord="6">MAX</EnumVal>
+      <EnumVal ord="7">AVG</EnumVal>
+      <EnumVal ord="8">SDV</EnumVal>
+      <EnumVal ord="9">PREDICTION</EnumVal>
+      <EnumVal ord="10">RATE</EnumVal>
+      <EnumVal ord="11">P-CLASS</EnumVal>
+      <EnumVal ord="12">M-CLASS</EnumVal>
+      <EnumVal ord="13">DIFF</EnumVal>
+    </EnumType>
+    <EnumType id="CalcModeKind">
+      <EnumVal ord="1">TOTAL</EnumVal>
+      <EnumVal ord="2">PERIOD</EnumVal>
+      <EnumVal ord="3">SLIDING</EnumVal>
+    </EnumType>
+    <EnumType id="CalcIntervalKind">
+      <EnumVal ord="1">MS</EnumVal>
+      <EnumVal ord="2">PER_CYCLE</EnumVal>
+      <EnumVal ord="3">CYCLE</EnumVal>
+      <EnumVal ord="4">DAY</EnumVal>
+      <EnumVal ord="5">WEEK</EnumVal>
+      <EnumVal ord="6">MONTH</EnumVal>
+      <EnumVal ord="7">YEAR</EnumVal>
+      <EnumVal ord="8">EXTERNAL</EnumVal>
+    </EnumType>
+    <EnumType id="FuelKind">
+      <EnumVal ord="0">BIT</EnumVal>
+      <EnumVal ord="1">LIG</EnumVal>
+      <EnumVal ord="2">SUB</EnumVal>
+      <EnumVal ord="3">WC</EnumVal>
+      <EnumVal ord="4">SC</EnumVal>
+      <EnumVal ord="5">DFO</EnumVal>
+      <EnumVal ord="6">JF</EnumVal>
+      <EnumVal ord="7">KER</EnumVal>
+      <EnumVal ord="8">PC</EnumVal>
+      <EnumVal ord="9">RFO</EnumVal>
+      <EnumVal ord="10">WO</EnumVal>
+      <EnumVal ord="11">NG</EnumVal>
+      <EnumVal ord="12">BFG</EnumVal>
+      <EnumVal ord="13">OG</EnumVal>
+      <EnumVal ord="14">PG</EnumVal>
+      <EnumVal ord="15">NUC</EnumVal>
+      <EnumVal ord="16">AB</EnumVal>
+      <EnumVal ord="17">MSW</EnumVal>
+      <EnumVal ord="18">OBS</EnumVal>
+      <EnumVal ord="19">TDF</EnumVal>
+      <EnumVal ord="20">WDS</EnumVal>
+      <EnumVal ord="21">OBL</EnumVal>
+      <EnumVal ord="22">BLQ</EnumVal>
+      <EnumVal ord="23">SLW</EnumVal>
+      <EnumVal ord="24">WDL</EnumVal>
+      <EnumVal ord="25">LFG</EnumVal>
+      <EnumVal ord="26">OBG</EnumVal>
+      <EnumVal ord="27">GEO</EnumVal>
+      <EnumVal ord="28">WAT</EnumVal>
+      <EnumVal ord="29">SUN</EnumVal>
+      <EnumVal ord="30">WND</EnumVal>
+      <EnumVal ord="31">HPS</EnumVal>
+      <EnumVal ord="32">PUR</EnumVal>
+      <EnumVal ord="33">WH</EnumVal>
+      <EnumVal ord="34">OTH</EnumVal>
+    </EnumType>
+  </DataTypeTemplates>
+</SCL>
